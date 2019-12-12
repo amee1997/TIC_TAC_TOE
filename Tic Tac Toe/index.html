@@ -1,0 +1,75 @@
+<DOCTYPE html>
+ <html>
+   <!-- starts of head -->
+   <head>
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script type="text/javascript" src="tictoe.js"></script>
+      <title>Tic Tac Toe</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+
+                $("#slide").toggle("slow");
+
+            });
+        });
+
+    </script>
+
+   </head>
+   <!-- end of head -->
+   <!--starts of body -->
+   <body>
+     <div id="slide">
+          <button id="play">Play</button>
+     </div>
+     <div class="inst">
+          <p id="test">RULES FOR TIC-TAC-TOE<br><br>
+
+              1. The game is played on a grid that's 3 squares by 3 squares.<br><br>
+
+              2. Player 1 is "X" and Player 2 is "O".<br><br>
+
+              3. Players take turns putting their marks in empty squares.<br><br>
+
+              4. Any player to get 3 of same (up, down, across, or diagonally) is the winner.<br><br>
+
+              5. When all 9 squares are full, the game is over.</p>
+     </div>
+          <br>
+     <div class="full"><center>
+           <h1 id="top">TIC TAC TOE</h1><br>
+           <input type="button" id="btn11" value="Player 1">
+           <input type="button" id="btn12" value="Player 2">
+           <br><br><br>
+                <!-- starts of table -->
+                <table>
+                   <tr><th><input type="button" id="btn1" class="btn" onclick="myFunction(1);" value=""></th>
+                       <th><input type="button" id="btn2" class="btn" onclick="myFunction(2);" value=""></th>
+                       <th><input type="button" id="btn3" class="btn" onclick="myFunction(3);" value=""></th>
+                   </tr>
+                   <tr><th><input type="button" id="btn4" class="btn" onclick="myFunction(4);" value=""></th>
+                       <th><input type="button" id="btn5" class="btn" onclick="myFunction(5);" value=""></th>
+                       <th><input type="button" id="btn6" class="btn" onclick="myFunction(6);" value=""></th>
+                   </tr>
+                   <tr><th><input type="button" id="btn7" class="btn" onclick="myFunction(7);" value=""></th>
+                       <th><input type="button" id="btn8" class="btn" onclick="myFunction(8);" value=""></th>
+                       <th><input type="button" id="btn9" class="btn" onclick="myFunction(9);" value=""></th>
+                   </tr>
+                </table>
+                <!-- end of table -->
+           <input type=button id="reset" onClick="reset()" value="Play again!">
+           </center>
+           <section align="center" id="popup">
+               <p id="text">text</p>
+               <button id="popupbutton" onClick="document.location.reload(true)">Ok</button>
+           </section>
+           <section id="overlay"></section>
+        </div>
+   </body>
+   <!-- end of body -->
+</html>
